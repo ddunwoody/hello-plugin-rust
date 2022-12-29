@@ -4,7 +4,7 @@
 This is a trivial plugin which just prints to stdout when
 enabled or disabled.
 
-This build has only been tested on Intel MacOSX.
+This build has only been tested on Intel MacOS 12.6 and Ubuntu 22.04.
 
 ## Installing into X-Plane
 
