@@ -35,3 +35,15 @@ extern "C" {
     pub fn XPLMCommandEnd(inCommand: XPLMCommandRef);
 }
 ```
+
+Once added, these can be invoked once types are converted, for example:
+
+```rust
+    const DREF_NAME: &str = "sim/flight_controls/pitch_trim_up";
+
+    let name = CString::new(DREF_NAME).expect("");
+    let data_ref = XPLMFindCommand(name.as_ptr());
+    XPLMCommandBegin(data_ref);
+    // ...
+    XPLMCommandEnd(data_ref);
+```
